@@ -1,0 +1,16 @@
+.card-page {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.card-page:hover {
+    box-shadow: 0 8px 20px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 52px 52px;
+}
