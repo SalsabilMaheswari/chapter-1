@@ -169,10 +169,10 @@ nav .right-side a {
     text-align: center;
 }
 
-  .personal .right .card .container p {
+.personal .right .card .container p {
       margin-top: 7px;
       text-align: center;
-  }
+}
 
 .personal .left {
     flex: 60%;
@@ -222,6 +222,11 @@ nav .right-side a {
 
 /*MY PROJECT*/
 
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .project h2 {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
@@ -235,6 +240,7 @@ nav .right-side a {
     box-shadow: 0px 0px 20px #00000040;
     margin-top: 20px;
     transition: 0.4s;
+    margin-left: 30px;
 }
 
 .card1 .image img {
