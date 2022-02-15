@@ -220,7 +220,7 @@ nav .right-side a {
     background: #f4f3f3;
     border: 1px solid #c4c4c4;
     border-radius: 8px;
-    cursor: progress;
+    cursor: pointer;
 }
 
 .blog-form form .input-card-image-group img {
@@ -232,7 +232,7 @@ nav .right-side a {
 }
   
 .blog-form form .input-card-image-group label {
-    cursor: progress;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -6,6 +6,11 @@ function addCard(event) {
   let title = document.getElementById('input-card-title').value;
   let content = document.getElementById('input-card-content').value;
   let image = document.getElementById('input-card-image');
+  let startDate = document.getElementById('today').value;
+  let endDate = document.getElementById('enddate').value;
+
+  startDate = new Date(startDate);
+  endDate = new Date(endDate);
 
   console.log(image);
   if (title == '' || image == '' || content == '') {
@@ -16,16 +21,17 @@ function addCard(event) {
   document.getElementById('input-card-title').value = '';
 
   let blog = {
-    author: 'Salsabil',
     title: title,
     image: image,
     content: content,
-    postedAt: new Date(),
+    startDate: startDate,
+    endDate: endDate,
   };
 
   blogs.push(blog);
 
   renderBlog();
+
 }
 
 function renderBlog() {
@@ -46,7 +52,7 @@ function renderBlog() {
                 </div>
                 <div class="header">
                   <h3><a href="detail-card1.html" target="_blank" style="color: black;">${blogs[i].title}</a></h3>
-                  <p style="color: rgba(0, 0, 0, 0.6)">durasi : 3 bulan</p>
+                  <p style="color: rgba(0, 0, 0, 0.6)">durasi : ${getDistanceTime(blogs[i].startDate, blogs[i].endDate)} hari</p>
                 </div>
                 <div class="content">
                   <p>
@@ -84,4 +90,13 @@ function renderBlog() {
             </div>
     `;
   }
+}
+
+function getDistanceTime(startDate, endDate){
+  var endDate = new Date(endDate);
+  var startDate = new Date(startDate);
+
+  var delta = endDate - startDate;
+  var resultDate = new Date(delta);
+  return resultDate.getDate("  hari");
 }
